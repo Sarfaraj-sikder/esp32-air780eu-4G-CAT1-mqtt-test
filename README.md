@@ -65,12 +65,6 @@ CONNACK OK
 SUBACK
 OK after publish
 These responses indicate that the modem completed cellular registration, packet data attach, and MQTT messaging over the internet.
-
-**Project Structure**
-.
-├── README.md
-└── src
-    └── esp32_air780eu_mqtt_demo.ino
     
 **Configuration**
 Before uploading the sketch, update these values:
