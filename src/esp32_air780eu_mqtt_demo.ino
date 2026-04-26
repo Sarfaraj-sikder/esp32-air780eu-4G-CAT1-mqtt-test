@@ -1,15 +1,17 @@
 // ESP32-WROOM-32 + DFRobot Air780EU 4G CAT1 modem
-// GitHub-ready demo: SIM unlock, network attach, MQTT subscribe + publish
+
 #define MODEM_RX 16
 #define MODEM_TX 17
 HardwareSerial modem(2);
-const char *SIM_PIN = "6030";
-const char *APN = "web.vodafone.de";
-const char *MQTT_HOST = "broker.emqx.io";
+
+const char *SIM_PIN = "****"; //chnage your PIN
+const char *APN = "web.vodafone.de"; //chnage your APN as needed
+const char *MQTT_HOST = "broker.emqx.io"; //emqx broker for testing
 const char *MQTT_PORT = "1883";
 const char *MQTT_CLIENT_ID = "esp32-air780eu-demo";
 const char *MQTT_TOPIC_SUB = "esp32/air780eu/in";
 const char *MQTT_TOPIC_PUB = "esp32/air780eu/out";
+
 String sendAT(const String &cmd, uint32_t timeoutMs = 3000) {
   while (modem.available()) {
     modem.read();
