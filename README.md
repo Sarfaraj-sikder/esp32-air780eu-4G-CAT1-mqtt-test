@@ -25,6 +25,9 @@ Vodafone SIM card with PIN enabled
 External LTE antenna
 Jumper wires
 
+**Software Used**
+Arduino IDE
+
 **Wiring**
 Air780EU TX -> ESP32 GPIO16 (RX2)
 Air780EU RX -> ESP32 GPIO17 (TX2)
